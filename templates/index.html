@@ -1,0 +1,13 @@
+{%extends 'base.html'%} {%block title%}Madlibs{%endblock%} {%block body%}
+
+<form action="/story" method="POST">
+  {%for word in story.prompts%}
+
+  <label for="{{word}}">{{word}}</label>
+  <input type="text" name="{{word}}" id="{{word}}" />
+  <br />
+
+  {%endfor%}
+  <input type="submit" />
+</form>
+{%endblock%}
